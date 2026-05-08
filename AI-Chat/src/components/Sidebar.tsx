@@ -170,6 +170,7 @@ export default function Sidebar({ isOpen, onToggle, onNewChat, onSettings }: Sid
                 </button>
                 ))}
               </div>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
