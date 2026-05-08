@@ -58,7 +58,7 @@ export default function InputBox({ onSend, disabled }: InputBoxProps) {
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
         onClick={() => textareaRef.current?.focus()}
-        className="relative flex flex-col rounded-2xl border bg-white/60 backdrop-blur-sm cursor-text"
+        className="relative flex flex-col rounded-2xl border bg-white/60 backdrop-blur-sm custom-cursor-text"
       >
         <textarea
           ref={textareaRef}
@@ -70,7 +70,7 @@ export default function InputBox({ onSend, disabled }: InputBoxProps) {
           disabled={disabled}
           placeholder="Ask anything..."
           rows={1}
-          className="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-[15px] resize-none px-4 pt-4 pb-14 font-normal leading-[1.6] text-[#111111] placeholder:text-neutral-400 cursor-text caret-black"
+          className="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-[15px] resize-none px-4 pt-4 pb-14 font-normal leading-[1.6] text-[#111111] placeholder:text-neutral-400 custom-cursor-text"
           style={{ minHeight: "56px" }}
         />
 
