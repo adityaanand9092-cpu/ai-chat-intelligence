@@ -57,7 +57,8 @@ export default function InputBox({ onSend, disabled }: InputBoxProps) {
             : "0 1px 3px rgba(0, 0, 0, 0.02)",
         }}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="relative flex flex-col rounded-2xl border bg-white/60 backdrop-blur-sm"
+        onClick={() => textareaRef.current?.focus()}
+        className="relative flex flex-col rounded-2xl border bg-white/60 backdrop-blur-sm cursor-text"
       >
         <textarea
           ref={textareaRef}
