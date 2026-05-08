@@ -12,7 +12,7 @@
 
 <div align="center">
 
-### [🚀 Try the Live Demo](https://ai-chat-intelligence-zl1k.vercel.app/)
+### [🚀 Try the Live Demo](https://ai-chat-intelligence-nu.vercel.app/)
 
 > [!NOTE]
 > This demo uses the Gemini Free Tier API. If the API hits its rate limit, the chatbot will automatically and silently fall back to logic-based mock responses to ensure the conversation never breaks.
