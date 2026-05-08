@@ -117,21 +117,19 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isLoading }) => {
         className="flex-1 overflow-y-auto no-scrollbar scroll-smooth"
       >
         <div className="max-w-3xl mx-auto px-4 md:px-8 py-8 w-full">
-          <AnimatePresence initial={false}>
-            {messages.map((msg, i) => {
-              const isUser = msg.role === "user";
-              const prev = i > 0 ? messages[i - 1] : null;
-              const isNewExchange = prev && prev.role === "assistant" && isUser;
+          {messages.map((msg, i) => {
+            const isUser = msg.role === "user";
+            const prev = i > 0 ? messages[i - 1] : null;
+            const isNewExchange = prev && prev.role === "assistant" && isUser;
 
-              return (
-                <motion.div
-                  key={msg.id}
-                  layout="position"
-                  initial={{ opacity: 0, scale: 0.96, y: 15, filter: "blur(4px)" }}
-                  animate={{ opacity: 1, scale: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ type: "spring", stiffness: 400, damping: 28, mass: 0.8 }}
-                  className={`w-full flex flex-col ${isUser ? "items-end" : "items-start"} ${isNewExchange ? "mt-8" : "mt-3"}`}
-                >
+            return (
+              <motion.div
+                key={msg.id}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2, ease: "easeOut" }}
+                className={`w-full flex flex-col ${isUser ? "items-end" : "items-start"} ${isNewExchange ? "mt-8" : "mt-3"}`}
+              >
                 {isUser ? (
                   <div className="inline-block max-w-[85%] text-left">
                     <div className="inline-block px-5 py-3.5 bg-neutral-200/80 text-neutral-900 rounded-2xl rounded-tr-sm text-[14px] leading-relaxed font-normal whitespace-pre-wrap antialiased">
@@ -170,7 +168,6 @@ const MessageList: React.FC<MessageListProps> = ({ messages, isLoading }) => {
               </motion.div>
             );
           })}
-          </AnimatePresence>
           <div ref={messagesEndRef} className="h-4" />
         </div>
       </div>

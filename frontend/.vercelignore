@@ -1,0 +1,8 @@
+.next/
+node_modules/
+*.png
+*.jpg
+*.svg
+.vscode/
+package-lock.json
+*.md
