@@ -69,7 +69,7 @@ export default function InputBox({ onSend, disabled }: InputBoxProps) {
           disabled={disabled}
           placeholder="Ask anything..."
           rows={1}
-          className="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-[15px] resize-none px-4 pt-4 pb-14 font-normal leading-[1.6] text-[#111111] placeholder:text-neutral-400 cursor-default"
+          className="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-[15px] resize-none px-4 pt-4 pb-14 font-normal leading-[1.6] text-[#111111] placeholder:text-neutral-400 cursor-text caret-black"
           style={{ minHeight: "56px" }}
         />
 

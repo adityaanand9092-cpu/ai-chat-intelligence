@@ -1,5 +1,0 @@
-fastapi
-pydantic
-supabase
-google-generativeai
-python-dotenv
